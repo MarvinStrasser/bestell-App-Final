@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -15,15 +15,25 @@
 
     <header>
         <div class="header_content">
-            <img class="logo" src="img/Logo/Bestell App- Logo.svg" alt="BestellApp_Logo">
+            <a href="index.html"><img class="logo" src="img/Logo/Bestell App- Logo.svg" alt="BestellApp_Logo"></a>
+
+            <div class="shopping-cart">
+                <i class="fa fa-shopping-cart" style="font-size:36px"></i>
+                <span>0</span>
+            </div>
         </div>
     </header>
 
     <div class="mainImage">
     </div>
 
-    <div class="restaurantName">
-        <h1 class="Restaurant_Title">Steaks & More</h1>
+    <section class="restaurant_information">
+        <div class="restaurantName">
+            <h1 class="Restaurant_Title">Steaks & More</h1>
+            <button onclick="" type="button" class="main_btn"><i class="fa fa-info-circle" style="font-size:12px"></i>
+                about us</button>
+        </div>
+
         <div class="stars">
             <p class="rating">Bewertung 4,4/5</p>
             <span class="fa fa-star checked"></span>
@@ -32,9 +42,69 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
         </div>
+    </section>
+
+
+    <div class="select_category">
+        <button class="main_btn_category">Hauptgerichte</button>
+        <button class="main_btn_category">Beilagen</button>
     </div>
 
-    div.
+    <section class="main_menu">
+        <div class="select_menu">
+            <h2>Rumpsteak "MADAGASKAR"</h2>
+            <div class="order">
+                <span>29,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>In grüner Pfeffersauce, dazu Pommes frites</span>
+        </div>
+
+        <div class="select_menu">
+            <h2>Zwiebel-Rumpsteak</h2>
+            <div class="order">
+                <span>28,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>mit Folienkartoffel und Sour-Cream</span>
+        </div>
+
+        <div class="select_menu">
+            <h2>Pfeffer-Rumpsteak</h2>
+            <div class="order">
+                <span>28,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>mit Pommes frites</span>
+        </div>
+
+        <div class="select_menu">
+            <h2>Pfeffer-Filetsteak</h2>
+            <div class="order">
+                <span>33,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>mit Pommes frites</span>
+        </div>
+
+        <div class="select_menu">
+            <h2>Lady Steak</h2>
+            <div class="order">
+                <span>34,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>Filetsteak mit Röstzwiebeln, gedünsteten Champignons und Folienkartoffel</span>
+        </div>
+
+        <div class="select_menu">
+            <h2>Filetsteak "Amerika"</h2>
+            <div class="order">
+                <span>34,90€</span>
+                <button class="order_btn">+</button>
+            </div>
+            <span>mit Spiegelei, gedünsteten Champignons, Röstzwiebeln und Folienkartoffel</span>
+        </div>
+    </section>
 
 </body>
 
