@@ -1,38 +1,81 @@
 let myDishes = [
     {
+        "Menu": "MainDish",
         "Name": "Rumpsteak MADAGASKAR",
         "Price": 29.90,
         "description": "In grüner Pfeffersauce, dazu Pommes frites",
         "amount": 1,
     },
     {
+        "Menu": "MainDish",
         "Name": "Zwiebel-Rumpsteak",
         "Price": 28.90,
         "description": "mit Folienkartoffel und Sour-Cream",
         "amount": 1,
     },
     {
+        "Menu": "MainDish",
         "Name": "Pfeffer-Rumpsteak",
         "Price": 28.90,
         "description": "mit Pommes frites",
         "amount": 1,
     },
     {
+        "Menu": "MainDish",
         "Name": "Pfeffer-Filetsteak",
         "Price": 33.90,
         "description": "mit Pommes frites",
         "amount": 1,
     },
     {
+        "Menu": "MainDish",
         "Name": "Lady Steak",
         "Price": 34.90,
         "description": "Filetsteak mit Röstzwiebeln, gedünsteten Champignons und Folienkartoffel",
         "amount": 1,
     },
     {
+        "Menu": "MainDish",
         "Name": "Filetsteak Amerika",
         "Price": 34.90,
         "description": "mit Spiegelei, gedünsteten Champignons, Röstzwiebeln und Folienkartoffel",
         "amount": 1,
     },
+
+    {
+        "Menu": "SideDish",
+        "Name": "kleiner gemischter Salat",
+        "Price": 6.50,
+        "description": "Blattsalat Mix, Gurke, Tomate, Paprika",
+        "amount": 1,
+    },
+    {
+        "Menu": "SideDish",
+        "Name": "Speck-Bohnen",
+        "Price": 10.90,
+        "description": "Grüne Bohnen mit Speck",
+        "amount": 1,
+    },
+    {
+        "Menu": "SideDish",
+        "Name": "kleine Folienkartoffel",
+        "Price": 8.50,
+        "description": "mit Sourcream",
+        "amount": 1,
+    },
+    {
+        "Menu": "SideDish",
+        "Name": "Pommes",
+        "Price": 6.50,
+        "description": "mit hausgemachter Soße",
+        "amount": 1,
+    },
+    {
+        "Menu": "SideDish",
+        "Name": "Coleslaw",
+        "Price": 8.50,
+        "description": "Weiß- und Rotkraut",
+        "amount": 1,
+    },
 ];
+
