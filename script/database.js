@@ -77,5 +77,29 @@ let myDishes = [
         "description": "Weiß- und Rotkraut",
         "amount": 1,
     },
+    {
+        "Menu": "Drinks",
+        "Name": "Wasser",
+        "Price": 4.50,
+        "amount": 1,
+    },
+        {
+        "Menu": "Drinks",
+        "Name": "Cola",
+        "Price": 5.50,
+        "amount": 1,
+    },
+        {
+        "Menu": "Drinks",
+        "Name": "Apfelsaftschorle",
+        "Price": 4.50,
+        "amount": 1,
+    },
+        {
+        "Menu": "Drinks",
+        "Name": "Bier",
+        "Price": 5.50,
+        "amount": 1,
+    },
 ];
 

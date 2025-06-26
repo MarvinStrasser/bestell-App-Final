@@ -37,6 +37,21 @@ function chooseSideDishes() {
   }
 }
 
+function chooseDrinks() {
+  let container = document.getElementById('main_menu');
+  container.innerHTML = '';
+
+  let Drinks = myDishes.filter(dish => dish.Menu === 'Drinks');
+
+  for (let dish of Drinks) {
+    container.innerHTML += createDishHTML(dish);
+  }
+}
+
 window.onload = function () {
   chooseMainDishes();
 };
+
+function name(params) {
+  id="Shopping_Cart_Amount"
+}

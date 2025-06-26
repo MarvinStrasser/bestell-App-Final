@@ -25,62 +25,92 @@
 
             <div class="shopping-cart">
                 <i class="fa fa-shopping-cart" style="font-size:36px"></i>
-                <span>0</span>
+                <span id="Shopping_Cart_Amount">0</span>
             </div>
         </div>
     </header>
 
     <div class="mainImage">
+          <img src="img/Steakhouse_logo.jpg" alt="Steaks & More Logo" class="main_logo">
     </div>
 
-    <section class="restaurant_information">
-        <div class="restaurant_header">
-            <h1 class="Restaurant_Title">Steaks & More</h1>
-            <button onclick="toggleAbout()" type="button" class="main_btn">
-                <i class="fa fa-info-circle" style="font-size:12px"></i> about us
-            </button>
-        </div>
+    <div class="page_wrapper">
+        <div class="content_area">
+            <section class="restaurant_information">
+                <div class="restaurant_header">
+                    <h1 class="Restaurant_Title">Steaks & More</h1>
+                    <button onclick="toggleAbout()" type="button" class="main_btn">
+                        <i class="fa fa-info-circle" style="font-size:12px"></i> about us
+                    </button>
+                </div>
 
-        <div class="stars">
-            <p class="rating">Bewertung 4,4/5</p>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-        </div>
+                <div class="stars">
+                    <p class="rating">Bewertung 4,4/5</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
 
-        <div id="aboutUsBox" onclick="toggleAbout()" class="about_overlay">
-            <div class="about_content" onclick="event.stopPropagation()">
-                <button class="close_btn" onclick="toggleAbout()">✖</button>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d547.6702895373519!2d12.643594379505375!3d47.77153830634879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1750761506775!5m2!1sde!2sde"
-                    width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <p>
-                    Willkommen bei „Steaks & More“ - deinem Steakhouse mit Leidenschaft!
-                    Frische Zutaten, top Qualität und das seit über 15 Jahren.
-                </p>
+                <div id="aboutUsBox" onclick="toggleAbout()" class="about_overlay">
+                    <div class="about_content" onclick="event.stopPropagation()">
+                        <button class="close_btn" onclick="toggleAbout()">✖</button>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d547.6702895373519!2d12.643594379505375!3d47.77153830634879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1750761506775!5m2!1sde!2sde"
+                            width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p>
+                            Willkommen bei „Steaks & More“ - deinem Steakhouse mit Leidenschaft!
+                            Frische Zutaten, top Qualität und das seit über 15 Jahren.
+                        </p>
 
-                <h3>Öffnungszeiten</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><strong>Montag:</strong> Ruhetag</li>
-                    <li><strong>Dienstag - Donnerstag:</strong> 17:00 - 22:00 Uhr</li>
-                    <li><strong>Freitag:</strong> 17:00 - 23:00 Uhr</li>
-                    <li><strong>Samstag:</strong> 12:00 - 23:00 Uhr</li>
-                    <li><strong>Sonntag:</strong> 12:00 - 21:00 Uhr</li>
-                </ul>
+                        <h3>Öffnungszeiten</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><strong>Montag:</strong> Ruhetag</li>
+                            <li><strong>Dienstag - Donnerstag:</strong> 17:00 - 22:00 Uhr</li>
+                            <li><strong>Freitag:</strong> 17:00 - 23:00 Uhr</li>
+                            <li><strong>Samstag:</strong> 12:00 - 23:00 Uhr</li>
+                            <li><strong>Sonntag:</strong> 12:00 - 21:00 Uhr</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="select_category">
+                <button class="main_btn_category" onclick="chooseMainDishes()">Hauptgerichte</button>
+                <button class="main_btn_category" onclick="chooseSideDishes()">Beilagen</button>
+                <button class="main_btn_category" onclick="chooseDrinks()">Getränke</button>
             </div>
-        </div>
-    </section>
 
-    <div class="select_category">
-        <button class="main_btn_category" onclick="chooseMainDishes()">Hauptgerichte</button>
-        <button class="main_btn_category" onclick="chooseSideDishes()">Beilagen</button>
+            <section id="main_menu"></section>
+        </div>
+
+        <div class="basket_wrapper">
+            <h2>Warenkorb</h2>
+            <p>Mindestbestellwert 25€</p>
+            <p>Abholung Gratis</p>
+        </div>
     </div>
 
     <section id="main_menu"></section>
+
+    <footer>
+        <div class="footer_links">
+            <a href="#">Ein Restaurant empfehlen</a>
+            <a href="#">Ein Restaurant anmelden</a>
+            <a href="#">Jobs</a>
+            <a href="#">AGB</a>
+            <a href="#">Datenschutzerklärung</a>
+            <a href="#">Impressum</a>
+        </div>
+
+        <div>
+            <span class="footer_span">© 2025 Bestell App</span>
+        </div>
+    </footer>
+
+
 
 </body>
 

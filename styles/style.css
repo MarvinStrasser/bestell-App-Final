@@ -43,7 +43,6 @@ header {
     height: 80px;
 }
 
-
 .mainImage {
     height: 300px;
     width: 100%;
@@ -53,6 +52,12 @@ header {
     background-position: center;
 }
 
+.main_logo{
+    height: 150px;
+    border-radius: 50%;
+        margin-left: 50px;
+    margin-top: 25px;
+}
 
 .restaurant_information {
     padding: 40px 40px;
@@ -80,8 +85,6 @@ header {
     margin-right: 10px;
 }
 
-
-
 .main_btn {
     background-color: lightgray;
     color: black;
@@ -95,11 +98,12 @@ header {
     transform: scale(1.03);
 }
 
-
 .about_overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     justify-content: center;
@@ -128,7 +132,28 @@ header {
     font-size: 20px;
 }
 
+.page_wrapper {
+    display: flex;
+    align-items: flex-start;
+}
 
+.content_area {
+    flex: 1;
+}
+
+.basket_wrapper {
+    width: 300px;
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
 
 .select_category {
     padding: 0px 40px;
@@ -147,7 +172,6 @@ header {
     box-shadow: rgb(136, 135, 135, 0.5);
     transform: scale(1.03);
 }
-
 
 #main_menu {
     padding: 40px 40px;
@@ -177,4 +201,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer {
+    width: 100%;
+    padding: 35px;
+    background-color: var(--footer);
+
+}
+
+.footer_links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_span{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
