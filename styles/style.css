@@ -1,69 +1,32 @@
-header {
-    background-color: #F08832;
-    height: 100px;
-    width: 100vw;
-    position: fixed;
-}
-
-.header_content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 60px 10px 40px;
-}
-
-.shopping-cart {
-    position: relative;
-}
-
-.shopping-cart span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: red;
-    border-radius: 50%;
-    color: #fff;
-    position: absolute;
-    top: 60%;
-    right: -16px;
-}
-
-.fa-shopping-cart {
-    color: white;
-}
-
-.fa-shopping-cart:hover {
-    box-shadow: rgb(136, 135, 135, 0.5);
-    transform: scale(1.03);
-}
-
 .logo {
     height: 80px;
 }
 
-.mainImage {
-    height: 300px;
-    width: 100%;
-    padding-top: 100px;
-    background-image: url(../img/steak.jpg);
-    background-size: cover;
-    background-position: center;
+.left-content-section {
+    width: 80%;
 }
 
-.main_logo{
-    height: 150px;
-    border-radius: 50%;
-        margin-left: 50px;
-    margin-top: 25px;
+.img-backgroud {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
+
+.img-background-logo {
+    position: relative;
+    height: 100px;
+    border-radius: 50%;
+    left: 45%;
+    top: -50px;
+}
+
+/* Restaurant informations */
 
 .restaurant_information {
-    padding: 40px 40px;
+    padding: 0 40px;
 }
 
-.restaurant_header {
+.restaurant-information-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,17 +35,19 @@ header {
     font-size: 32px;
 }
 
-.Restaurant_Title {
-    margin: 0;
-}
-
-.stars {
-    margin-top: 10px;
+.review {
+    margin: 20px 0;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
 }
 
 .rating {
     margin-right: 10px;
+}
+
+.checked {
+    color: orange;
 }
 
 .main_btn {
@@ -132,29 +97,7 @@ header {
     font-size: 20px;
 }
 
-.page_wrapper {
-    display: flex;
-    align-items: flex-start;
-}
-
-.content_area {
-    flex: 1;
-}
-
-.basket_wrapper {
-    width: 300px;
-    position: sticky;
-    top: 100px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    box-sizing: border-box;
-}
-
+/* Select Category Buttons */
 .select_category {
     padding: 0px 40px;
     gap: 40px;
@@ -172,6 +115,9 @@ header {
     box-shadow: rgb(136, 135, 135, 0.5);
     transform: scale(1.03);
 }
+
+
+/* Menu Section */
 
 #main_menu {
     padding: 40px 40px;
@@ -203,20 +149,89 @@ header {
     justify-content: center;
 }
 
-footer {
-    width: 100%;
-    padding: 35px;
-    background-color: var(--footer);
+/* Shopping cart section */
+
+.right-content-section {
+    position: sticky;
+    top: 0px;
+    padding: 40px 10px;
+    width: 20%;
+    background-color: white;
+    min-height: 100vh;
+    border-left: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-content-section h2 {
+    margin-bottom: 20px;
+}
+
+.basket-shopping-cart {
+    height: 100px;
+}
+
+#shopping_cart {
+  max-height: 600px;
+  overflow-y: auto;  
+  padding-right: 8px; 
+}
+
+.cart_summary {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
 }
 
-.footer_links {
-    display: flex;
-    justify-content: space-between;
+.warning_note {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.footer_span{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.cart_item {
+  display: flex;
+  flex-direction: column; 
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  gap: 8px;
+}
+
+.cart_name, .cart_price, .cart_buttons {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+}
+
+.cart_name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cart_price {
+  color: #555;
+  font-size: 14px;
+}
+
+
+.cart_item button {
+  background-color: #F08832;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 6px;
+  color: #333;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

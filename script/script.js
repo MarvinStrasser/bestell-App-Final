@@ -1,4 +1,3 @@
-//Function for Restaurant information//
 function toggleAbout(event) {
     if (event) {
         event.stopPropagation();
@@ -7,49 +6,45 @@ function toggleAbout(event) {
     box.classList.toggle('show');
 }
 
-//select Main Dishes or siders//
-function ChooseMainDishes() {
-    return 
-}
-
-
-
-//functions for myDishes innerHTML//
 function chooseMainDishes() {
-  let container = document.getElementById('main_menu');
-  container.innerHTML = '';
+    let container = document.getElementById('main_menu');
+    container.innerHTML = '';
 
-  let mainDishes = myDishes.filter(dish => dish.Menu === 'MainDish');
-
-  for (let dish of mainDishes) {
-    container.innerHTML += createDishHTML(dish);
-  }
+    for (let i = 0; i < myDishes.length; i++) {
+        let dish = myDishes[i];
+        if (dish.Menu === 'MainDish') {
+            container.innerHTML += createDishHTML(dish, i);
+        }
+    }
 }
 
 function chooseSideDishes() {
-  let container = document.getElementById('main_menu');
-  container.innerHTML = '';
+    let container = document.getElementById('main_menu');
+    container.innerHTML = '';
 
-  let sideDishes = myDishes.filter(dish => dish.Menu === 'SideDish');
-
-  for (let dish of sideDishes) {
-    container.innerHTML += createDishHTML(dish);
-  }
+    for (let i = 0; i < myDishes.length; i++) {
+        let dish = myDishes[i];
+        if (dish.Menu === 'SideDish') {
+            container.innerHTML += createDishHTML(dish, i);
+        }
+    }
 }
 
 function chooseDrinks() {
-  let container = document.getElementById('main_menu');
-  container.innerHTML = '';
+    let container = document.getElementById('main_menu');
+    container.innerHTML = '';
 
-  let Drinks = myDishes.filter(dish => dish.Menu === 'Drinks');
-
-  for (let dish of Drinks) {
-    container.innerHTML += createDishHTML(dish);
-  }
+    for (let i = 0; i < myDishes.length; i++) {
+        let dish = myDishes[i];
+        if (dish.Menu === 'Drinks') {
+            container.innerHTML += createDishHTML(dish, i);
+        }
+    }
 }
 
-window.onload = function () {
+window.onload = function() {
   chooseMainDishes();
+  document.getElementById('order_btn').addEventListener('click', placeOrder);
 };
 
 function name(params) {

@@ -5,46 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
-    <link rel="icon" type="image/x-icon" href="img/Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/Favicon/favicon.ico" />
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/standards.css">
 
     <script src="script/script.js"></script>
     <script src="script/database.js"></script>
     <script src="script/templates.js"></script>
+    <script src="script/shopping-cart.js"></script>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
     <header>
         <div class="header_content">
-            <a href="index.html"><img class="logo" src="img/Logo/Bestell App- Logo.svg" alt="BestellApp_Logo"></a>
-
-            <div class="shopping-cart">
-                <i class="fa fa-shopping-cart" style="font-size:36px"></i>
-                <span id="Shopping_Cart_Amount">0</span>
-            </div>
+            <a href="index.html"><img class="logo" src="assets/img/Logo/Logo.png" alt="BestellApp_Logo"></a>
         </div>
     </header>
 
-    <div class="mainImage">
-          <img src="img/Steakhouse_logo.jpg" alt="Steaks & More Logo" class="main_logo">
-    </div>
+    <main>
 
-    <div class="page_wrapper">
-        <div class="content_area">
-            <section class="restaurant_information">
-                <div class="restaurant_header">
-                    <h1 class="Restaurant_Title">Steaks & More</h1>
+        <section class="left-content-section">
+            <div class="restaurant-img-background">
+                <img src="assets/img/steak.jpg" alt="steak-img" class="img-backgroud">
+                <img src="assets/img/Steakhouse_logo.jpg" alt="steakhouse-logo" class="img-background-logo">
+            </div>
+
+            <div class="restaurant_information">
+                <div class="restaurant-information-header">
+                    <h1>Steaks & More</h1>
                     <button onclick="toggleAbout()" type="button" class="main_btn">
                         <i class="fa fa-info-circle" style="font-size:12px"></i> about us
                     </button>
                 </div>
 
-                <div class="stars">
+                <div class="review">
                     <p class="rating">Bewertung 4,4/5</p>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -76,7 +75,8 @@
                         </ul>
                     </div>
                 </div>
-            </section>
+            </div>
+
             <div class="select_category">
                 <button class="main_btn_category" onclick="chooseMainDishes()">Hauptgerichte</button>
                 <button class="main_btn_category" onclick="chooseSideDishes()">Beilagen</button>
@@ -84,16 +84,25 @@
             </div>
 
             <section id="main_menu"></section>
-        </div>
+            </div>
+        </section>
 
-        <div class="basket_wrapper">
+        <section class="right-content-section">
+            <img src="assets/img/Shopping-cart.jpg" alt="shopping-cart-icon" class="basket-shopping-cart">
             <h2>Warenkorb</h2>
-            <p>Mindestbestellwert 25€</p>
-            <p>Abholung Gratis</p>
-        </div>
-    </div>
+            <div id="shopping_cart">
+                <p>Der Warenkorb ist leer.</p>
+            </div>
+            <hr>
+            <div class="cart_summary">
+                <p>Zwischensumme: <span id="subtotal">0,00 €</span></p>
+                <div id="min_order_note" class="warning_note"></div>
+                <button id="order_btn" class="main_btn_category" disabled>Jetzt bestellen</button>
+                <div id="order_message" style="margin-top:10px; color: green; font-weight: bold;"></div>
+            </div>
 
-    <section id="main_menu"></section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer_links">
@@ -109,9 +118,6 @@
             <span class="footer_span">© 2025 Bestell App</span>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
