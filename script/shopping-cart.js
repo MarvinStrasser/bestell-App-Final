@@ -8,18 +8,55 @@ function addToCart(index) {
 }
 
 function updateCartHTML() {
-    let b = document.getElementById('shopping_cart'), t = 0;
-    b.innerHTML = cart.length ? '' : '<p>Keine Artikel im Warenkorb.</p>';
-    for (let i = 0; i < cart.length; i++) {
-        let c = cart[i];
-        t += c.Price * c.amount;
-        b.innerHTML += `<div class="cart_item"><div class="cart_name">${c.Name} (${c.amount}x)</div><div class="cart_price">${(c.Price * c.amount).toFixed(2)} €</div><div class="cart_buttons"><button onclick="changeAmount(${i},1)">+</button><button onclick="changeAmount(${i},-1)">-</button><button onclick="removeFromCart(${i})"><i class="fa fa-trash"></i></button></div></div>`;
-    }
-    document.getElementById('subtotal').innerText = t.toFixed(2) + ' €';
-    checkMinimumOrder(t);
-    const orderBtn = document.getElementById('order_btn');
-    orderBtn.disabled = t < 40;
+    renderCartItems();
+    updateSubtotal();
+    checkMinimumOrder(getCartTotal());
+    toggleOrderButton();
+    clearOrderMessage();
+    updateMobileCart();
+}
+
+function renderCartItems() {
+    const container = document.getElementById('shopping_cart');
+    container.innerHTML = cart.length ? '' : '<p>Keine Artikel im Warenkorb.</p>';
+
+    cart.forEach((c, i) => {
+        container.innerHTML += `
+            <div class="cart_item">
+                <div class="cart_name">${c.Name} (${c.amount}x)</div>
+                <div class="cart_price">${(c.Price * c.amount).toFixed(2)} €</div>
+                <div class="cart_buttons">
+                    <button onclick="changeAmount(${i},1)">+</button>
+                    <button onclick="changeAmount(${i},-1)">-</button>
+                    <button onclick="removeFromCart(${i})"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>`;
+    });
+}
+
+function updateSubtotal() {
+    const total = getCartTotal();
+    document.getElementById('subtotal').innerText = total.toFixed(2) + ' €';
+}
+
+function toggleOrderButton() {
+    const btn = document.getElementById('order_btn');
+    btn.disabled = getCartTotal() < 40;
+}
+
+function clearOrderMessage() {
     document.getElementById('order_message').innerText = '';
+}
+
+function updateMobileCart() {
+    const price = document.getElementById('shopping-cart-price');
+    const count = document.getElementById('shopping-cart-count');
+    if (!price || !count) return;
+
+    const total = getCartTotal();
+    const items = cart.reduce((sum, item) => sum + item.amount, 0);
+    price.innerText = total.toFixed(2) + ' €';
+    count.innerText = items;
 }
 
 function checkMinimumOrder(total) {

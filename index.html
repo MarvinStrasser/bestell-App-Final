@@ -88,12 +88,13 @@
         </section>
 
         <section class="right-content-section">
+            <button class="close-mobile-cart-btn" onclick="closeMobileCart()">X</button>
             <img src="assets/img/Shopping-cart.jpg" alt="shopping-cart-icon" class="basket-shopping-cart">
             <h2>Warenkorb</h2>
             <div id="shopping_cart">
                 <p>Der Warenkorb ist leer.</p>
             </div>
-            <hr>
+
             <div class="cart_summary">
                 <p>Zwischensumme: <span id="subtotal">0,00 €</span></p>
                 <div id="min_order_note" class="warning_note"></div>
@@ -103,6 +104,15 @@
 
         </section>
     </main>
+
+    <div class="shopping-cart-responsive" onclick="toggleMobileCart()">
+        <div class="shopping-cart-icon-responsive">
+            <img src="assets/img/Shopping-cart.jpg" alt="shopping-cart-icon" class="basket-shopping-cart-responsive">
+            <span id="shopping-cart-count">0</span>
+        </div>
+        <div class="shopping-cart-text-responsive">Warenkorb ansehen</div>
+        <div class="shopping-cart-price" id="shopping-cart-price">0,00 €</div>
+    </div>
 
     <footer>
         <div class="footer_links">

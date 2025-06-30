@@ -6,6 +6,10 @@ function toggleAbout(event) {
     box.classList.toggle('show');
 }
 
+function toggleMobileCart() {
+    document.querySelector('.right-content-section')?.scrollIntoView({ behavior: 'smooth' });
+}
+
 function chooseMainDishes() {
     let container = document.getElementById('main_menu');
     container.innerHTML = '';
@@ -42,11 +46,21 @@ function chooseDrinks() {
     }
 }
 
+function toggleMobileCart() {
+    console.log('toggleMobileCart() wurde aufgerufen!');
+    const cart = document.querySelector('.right-content-section');
+    cart.classList.add('open');
+    updateCartHTML();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeMobileCart() {
+    const cart = document.querySelector('.right-content-section');
+    cart.classList.remove('open');
+}
+
 window.onload = function() {
   chooseMainDishes();
   document.getElementById('order_btn').addEventListener('click', placeOrder);
 };
 
-function name(params) {
-  id="Shopping_Cart_Amount"
-}
