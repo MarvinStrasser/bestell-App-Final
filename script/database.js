@@ -81,24 +81,28 @@ let myDishes = [
         "Menu": "Drinks",
         "Name": "Wasser",
         "Price": 4.50,
+        "description": "0,75 Liter",
         "amount": 1,
     },
         {
         "Menu": "Drinks",
         "Name": "Cola",
         "Price": 5.50,
+        "description": "0,5 Liter",
         "amount": 1,
     },
         {
         "Menu": "Drinks",
         "Name": "Apfelsaftschorle",
         "Price": 4.50,
+        "description": "0,5 Liter",
         "amount": 1,
     },
         {
         "Menu": "Drinks",
         "Name": "Bier",
         "Price": 5.50,
+        "description": "0,5 Liter",
         "amount": 1,
     },
 ];
