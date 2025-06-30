@@ -97,6 +97,7 @@ footer {
 .footer_links {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 
 .footer_span{
