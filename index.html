@@ -57,7 +57,7 @@
                         <button class="close_btn" onclick="toggleAbout()">✖</button>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d547.6702895373519!2d12.643594379505375!3d47.77153830634879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1750761506775!5m2!1sde!2sde"
-                            width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                         <p>
@@ -78,9 +78,9 @@
             </div>
 
             <div class="select_category">
-                <button class="main_btn_category" onclick="chooseMainDishes()">Hauptgerichte</button>
-                <button class="main_btn_category" onclick="chooseSideDishes()">Beilagen</button>
-                <button class="main_btn_category" onclick="chooseDrinks()">Getränke</button>
+                <button class="main_btn_category" onclick="chooseMyDish('MainDish')">Hauptgerichte</button>
+                <button class="main_btn_category" onclick="chooseMyDish('SideDish')">Beilagen</button>
+                <button class="main_btn_category" onclick="chooseMyDish('Drinks')">Getränke</button>
             </div>
 
             <section id="main_menu"></section>

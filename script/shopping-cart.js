@@ -16,23 +16,6 @@ function updateCartHTML() {
     updateMobileCart();
 }
 
-function renderCartItems() {
-    const container = document.getElementById('shopping_cart');
-    container.innerHTML = cart.length ? '' : '<p>Keine Artikel im Warenkorb.</p>';
-    cart.forEach((c, i) => {
-        container.innerHTML += `
-            <div class="cart_item">
-                <div class="cart_name">${c.Name} (${c.amount}x)</div>
-                <div class="cart_price">${(c.Price * c.amount).toFixed(2)} €</div>
-                <div class="cart_buttons">
-                    <button onclick="changeAmount(${i},1)">+</button>
-                    <button onclick="changeAmount(${i},-1)">-</button>
-                    <button onclick="removeFromCart(${i})"><i class="fa fa-trash"></i></button>
-                </div>
-            </div>`;
-    });
-}
-
 function updateSubtotal() {
     const total = getCartTotal();
     document.getElementById('subtotal').innerText = total.toFixed(2) + ' €';

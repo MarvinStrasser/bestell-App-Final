@@ -7,44 +7,21 @@ function toggleAbout(event) {
 }
 
 function toggleMobileCart() {
-    document.querySelector('.right-content-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementsByClassName('.right-content-section')?.scrollIntoView({ behavior: 'smooth' });
 }
 
-function chooseMainDishes() {
+function chooseMyDish(menuType) {
     let container = document.getElementById('main_menu');
     container.innerHTML = '';
     for (let i = 0; i < myDishes.length; i++) {
         let dish = myDishes[i];
-        if (dish.Menu === 'MainDish') {
-            container.innerHTML += createDishHTML(dish, i);
-        }
-    }
-}
-
-function chooseSideDishes() {
-    let container = document.getElementById('main_menu');
-    container.innerHTML = '';
-    for (let i = 0; i < myDishes.length; i++) {
-        let dish = myDishes[i];
-        if (dish.Menu === 'SideDish') {
-            container.innerHTML += createDishHTML(dish, i);
-        }
-    }
-}
-
-function chooseDrinks() {
-    let container = document.getElementById('main_menu');
-    container.innerHTML = '';
-    for (let i = 0; i < myDishes.length; i++) {
-        let dish = myDishes[i];
-        if (dish.Menu === 'Drinks') {
+        if (dish.Menu === menuType) {
             container.innerHTML += createDishHTML(dish, i);
         }
     }
 }
 
 function toggleMobileCart() {
-    console.log('toggleMobileCart() wurde aufgerufen!');
     const cart = document.querySelector('.right-content-section');
     cart.classList.add('open');
     updateCartHTML();
@@ -59,5 +36,9 @@ function closeMobileCart() {
 window.onload = function() {
   chooseMainDishes();
   document.getElementById('order_btn').addEventListener('click', placeOrder);
+};
+
+window.onload = function() {
+    chooseMyDish('MainDish');
 };
 
