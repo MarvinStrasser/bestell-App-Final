@@ -19,7 +19,6 @@ function updateCartHTML() {
 function renderCartItems() {
     const container = document.getElementById('shopping_cart');
     container.innerHTML = cart.length ? '' : '<p>Keine Artikel im Warenkorb.</p>';
-
     cart.forEach((c, i) => {
         container.innerHTML += `
             <div class="cart_item">

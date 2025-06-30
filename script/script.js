@@ -13,7 +13,6 @@ function toggleMobileCart() {
 function chooseMainDishes() {
     let container = document.getElementById('main_menu');
     container.innerHTML = '';
-
     for (let i = 0; i < myDishes.length; i++) {
         let dish = myDishes[i];
         if (dish.Menu === 'MainDish') {
@@ -25,7 +24,6 @@ function chooseMainDishes() {
 function chooseSideDishes() {
     let container = document.getElementById('main_menu');
     container.innerHTML = '';
-
     for (let i = 0; i < myDishes.length; i++) {
         let dish = myDishes[i];
         if (dish.Menu === 'SideDish') {
@@ -37,7 +35,6 @@ function chooseSideDishes() {
 function chooseDrinks() {
     let container = document.getElementById('main_menu');
     container.innerHTML = '';
-
     for (let i = 0; i < myDishes.length; i++) {
         let dish = myDishes[i];
         if (dish.Menu === 'Drinks') {

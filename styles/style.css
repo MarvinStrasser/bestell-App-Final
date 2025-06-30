@@ -98,6 +98,7 @@
 }
 
 /* Select Category Buttons */
+
 .select_category {
     padding: 0px 40px;
     gap: 40px;
@@ -115,7 +116,6 @@
     box-shadow: rgb(136, 135, 135, 0.5);
     transform: scale(1.03);
 }
-
 
 /* Menu Section */
 
@@ -278,7 +278,6 @@
     font-size: 14px;
 }
 
-
 .cart_item button {
     background-color: #F08832;
     border: 1px solid #ccc;
@@ -300,8 +299,6 @@
         display: none;
     }
 }
-
-
 
 @media (max-width: 1000px) {
     main {
